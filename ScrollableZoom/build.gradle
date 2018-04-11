@@ -1,10 +1,9 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+group='com.github.digitalbithub'
 
 android {
     compileSdkVersion 26
-
-
-
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 26
