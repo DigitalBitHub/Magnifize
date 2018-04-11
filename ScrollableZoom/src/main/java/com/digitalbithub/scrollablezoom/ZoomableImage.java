@@ -139,7 +139,7 @@ public class ZoomableImage extends View {
         invalidate();
     }
 
-    private void setBitmap(Bitmap bitmap) {
+    public void setBitmap(Bitmap bitmap) {
         this.bitmap = bitmap;
         invalidate();
     }
