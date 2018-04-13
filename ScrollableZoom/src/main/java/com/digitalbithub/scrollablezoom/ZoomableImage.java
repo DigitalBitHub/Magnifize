@@ -87,6 +87,7 @@ public class ZoomableImage extends View {
     @Override
     public void draw(Canvas canvas) {
         super.draw(canvas);
+        System.out.println("onDraw x:" + x + " y:" + y);
         viewBounds.set(x, y, x + requiredWidth, y + requiredHeight);
         canvas.clipRect(viewBounds);
         canvas.drawBitmap(bitmap, null, viewBounds, new Paint());
@@ -111,14 +112,16 @@ public class ZoomableImage extends View {
     private void move(MotionEvent event) {
         float dx = startX - event.getX();
         float dy = startY - event.getY();
-        x += dx / 2;
-        y += dy / 2;
+        x += (dx * 2);
+        y += (dy * 2);
         if (x > 0) x = 0;
         if (y > 0) y = 0;
         if ((y + requiredHeight) < getMeasuredHeight())
             y = getMeasuredHeight() - requiredHeight;
         if ((x + requiredWidth) < getMeasuredWidth())
             x = getMeasuredWidth() - requiredWidth;
+        startX = event.getX();
+        startY = event.getY();
         invalidate();
     }
 
@@ -126,16 +129,20 @@ public class ZoomableImage extends View {
         float viewWidth = getMeasuredWidth();
         float viewHeight = getMeasuredHeight();
         if (zoom) {
-            requiredHeight *= 2;
-            requiredWidth *= 2;
             startX = event.getX();
             startY = event.getY();
+            requiredHeight *= 2;
+            requiredWidth *= 2;
+            x = startX - (startX * 2);
+            y = startY - (startY * 2);
+
         } else {
             requiredHeight /= 2;
             requiredWidth /= 2;
+            x = (viewWidth - requiredWidth) / 2;
+            y = (viewHeight - requiredHeight) / 2;
         }
-        x = (viewWidth - requiredWidth) / 2;
-        y = (viewHeight - requiredHeight) / 2;
+
         invalidate();
     }
 
