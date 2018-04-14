@@ -1,4 +1,4 @@
-package com.digitalbithub.scrollablezoom;
+package com.digitalbithub.magnifize;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -14,8 +14,8 @@ import android.view.MotionEvent;
 import android.view.View;
 
 
-public class ZoomableImage extends View {
-    private static final String LOG_TAG = "log";
+public class MagnifizeView extends View {
+    private static final String LOG_TAG = "Magnifize";
     private Bitmap bitmap;
     private RectF viewBounds;
     private float x, y;
@@ -24,26 +24,26 @@ public class ZoomableImage extends View {
     private int imageSource;
 
 
-    public ZoomableImage(Context context) {
+    public MagnifizeView(Context context) {
         super(context);
         init(context, null);
     }
 
-    public ZoomableImage(Context context, @Nullable AttributeSet attrs) {
+    public MagnifizeView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         init(context, attrs);
     }
 
-    public ZoomableImage(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public MagnifizeView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context, attrs);
     }
 
     void init(Context context, @Nullable AttributeSet attrs) {
         if (attrs != null) {
-            TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.ZoomableImage);
+            TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.MagnifizeView);
             try {
-                imageSource = typedArray.getResourceId(R.styleable.ZoomableImage_imageScr, -1);
+                imageSource = typedArray.getResourceId(R.styleable.MagnifizeView_imageScr, -1);
             } catch (Exception e) {
                 e.printStackTrace();
             } finally {

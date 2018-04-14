@@ -2,7 +2,7 @@
 <resources>
     <attr name="imageScr" format="reference" />
 
-    <declare-styleable name="ZoomableImage">
+    <declare-styleable name="MagnifizeView">
         <attr name="imageScr" />
     </declare-styleable>
 </resources>

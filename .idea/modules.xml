@@ -3,7 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ImageZoom.iml" filepath="$PROJECT_DIR$/ImageZoom.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ScrollableZoom/ScrollableZoom.iml" filepath="$PROJECT_DIR$/ScrollableZoom/ScrollableZoom.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Magnifize/Magnifize.iml" filepath="$PROJECT_DIR$/Magnifize/Magnifize.iml" />
+      <module fileurl="file://E:\android\Projects\ImageZoom\Magnifize\ScrollableZoom.iml" filepath="E:\android\Projects\ImageZoom\Magnifize\ScrollableZoom.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

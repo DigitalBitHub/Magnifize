@@ -1,1 +1,1 @@
-include ':app', ':ScrollableZoom'
+include ':app', ':Magnifize'

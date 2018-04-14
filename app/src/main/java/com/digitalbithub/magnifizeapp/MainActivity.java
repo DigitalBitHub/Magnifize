@@ -1,4 +1,4 @@
-package com.digitalbithub.imagezoom;
+package com.digitalbithub.magnifizeapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
