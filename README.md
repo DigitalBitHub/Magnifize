@@ -1,5 +1,5 @@
-# Scrollable Zoom 
-[![](https://www.jitpack.io/v/DigitalBitHub/ScrollableZoom.svg)](https://www.jitpack.io/#DigitalBitHub/ScrollableZoom)
+# Magnifize
+[![](https://www.jitpack.io/v/DigitalBitHub/Magnifize.svg)](https://www.jitpack.io/#DigitalBitHub/Magnifize)
 
 # Usage
 Step 1. Add the JitPack repository to your build file
@@ -14,14 +14,14 @@ allprojects {
 Step 2. Add the dependency
 ```groovy
 dependencies {
-  compile 'com.github.DigitalBitHub:ScrollableZoom:1.0'
+  compile 'com.github.DigitalBitHub:Magnifize:1.2'
  }
  ```
   
 # Implementation
 ### XML Implementation:
 ```xml
-<com.digitalbithub.scrollablezoom.ZoomableImage
+<com.digitalbithub.magnifize.MagnifizeView
   android:id="@+id/image"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
@@ -29,8 +29,8 @@ dependencies {
 ```
 ### Java Implementation:
 ```java
-ZoomableImage zoomableImage = findViewById(R.id.image);
-diagonalView.setBitmap(bitmap);
+MagnifizeView magnifizeView = findViewById(R.id.image);
+magnifizeView.setBitmap(bitmap);
 ```
 # Licence
 ```
