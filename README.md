@@ -1,8 +1,11 @@
 # Magnifize
 [![](https://www.jitpack.io/v/DigitalBitHub/Magnifize.svg)](https://www.jitpack.io/#DigitalBitHub/Magnifize)
 
+#### Checkout the video demo http://www.youtube.com/watch?v=-7zJ0ILCi4o
+[![Magnifize Demo](http://img.youtube.com/vi/-7zJ0ILCi4o/0.jpg)](http://www.youtube.com/watch?v=-7zJ0ILCi4o)
+
 # Usage
-Step 1. Add the JitPack repository to your build file
+#### Step 1. Add the JitPack repository to your build file
 ```groovy
 allprojects {
         repositories {
@@ -11,10 +14,10 @@ allprojects {
         }
     }
 ```
-Step 2. Add the dependency
+#### Step 2. Add the dependency
 ```groovy
 dependencies {
-  compile 'com.github.DigitalBitHub:Magnifize:1.2'
+  compile 'com.github.DigitalBitHub:Magnifize:1.3'
  }
  ```
   
