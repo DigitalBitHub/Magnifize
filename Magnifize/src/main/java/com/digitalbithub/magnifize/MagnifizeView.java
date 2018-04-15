@@ -20,6 +20,7 @@ public class MagnifizeView extends View {
     private RectF viewBounds;
     private float x, y;
     private float startX, startY;
+    private float width, height;
     private float requiredWidth, requiredHeight;
     private int imageSource;
 
@@ -80,6 +81,8 @@ public class MagnifizeView extends View {
             requiredHeight = viewHeight;
             requiredWidth = scale * bitmapWidth;
         }
+        width = requiredWidth;
+        height = requiredHeight;
         x = (viewWidth - requiredWidth) / 2;
         y = (viewHeight - requiredHeight) / 2;
     }
@@ -105,6 +108,8 @@ public class MagnifizeView extends View {
             case MotionEvent.ACTION_UP:
                 zoomImage(false, event);
                 break;
+            case MotionEvent.ACTION_CANCEL:
+                zoomImage(false, event);
         }
         return true;
     }
@@ -137,8 +142,8 @@ public class MagnifizeView extends View {
             y = startY - (startY * 2);
 
         } else {
-            requiredHeight /= 2;
-            requiredWidth /= 2;
+            requiredWidth = width;
+            requiredHeight = height;
             x = (viewWidth - requiredWidth) / 2;
             y = (viewHeight - requiredHeight) / 2;
         }
