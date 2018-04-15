@@ -1,6 +1,8 @@
 # Magnifize
 [![](https://www.jitpack.io/v/DigitalBitHub/Magnifize.svg)](https://www.jitpack.io/#DigitalBitHub/Magnifize)
 
+A Library to add Magnify effect on image.
+
 #### Checkout the video demo http://www.youtube.com/watch?v=-7zJ0ILCi4o
 [![Magnifize Demo](http://img.youtube.com/vi/-7zJ0ILCi4o/0.jpg)](http://www.youtube.com/watch?v=-7zJ0ILCi4o)
 
